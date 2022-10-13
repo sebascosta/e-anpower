@@ -1,28 +1,31 @@
 import React from 'react';
 import './components/App.css';
-import Nav from './components/NavBar';
+import Nav from './components/NavBar/NavBar';
 import Calzas from './components/Calzas';
 import Remeras from './components/Remeras';
 import Inicio from './components/Inicio';
 import Tops from './components/Tops';
-import {BrowserRouter as Router,Routes, Route, Link } from 'react-router-dom';
+import {BrowserRouter,Routes, Route, Link } from 'react-router-dom';
 import ItemListContainer from './components/ItemListContainer/ItemListContainer';
+import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
+
 
 
 function App() {
   return (
-    <Router>
-      <div>        
+    
+    
+      <div>       
+        <BrowserRouter> 
         <Nav />
-        <ItemListContainer greeting={'Bienvenido/a'} />
-        <Routes>
-        <Route path='/' exact component={Inicio}/>
-        <Route path='/calzas' component={Calzas}/>
-        <Route path='/remeras' component={Remeras}/>
-        <Route path='/tops' component={Tops}/>
-        </Routes>
+          <Routes>
+            <Route path = '/' element={<ItemListContainer greeting={'Bienvenido/a'} />}/>
+            <Route path = '/detail/:productId' element={<ItemDetailContainer/> }/>
+          </Routes>   
+          
+        </BrowserRouter>
       </div>
-    </Router>
+   
   );
 }
 

@@ -1,8 +1,8 @@
 import React from "react";
-import './App.css';
-import logo from './Images/logo.png';
-import {BrowserRouter as Router,Routes, Route, Link } from 'react-router-dom';
-import CartWidget from './CartWidget/CartWidget';
+import '../App.css';
+import logo from '../Images/logo.png';
+import { Link } from 'react-router-dom';
+import CartWidget from '../CartWidget/CartWidget';
 
 function Nav() {
    return( 
