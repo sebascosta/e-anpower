@@ -10,7 +10,7 @@ const products = [
 },
 {
     id: '2',
-    name:'bluemesh',
+    name:'Bluemesh',
     img:'https://cdn.shopify.com/s/files/1/0430/9594/9479/products/S-PEACE-E_360x.jpg?v=1646829692',
     category:'calzas',
     price: '3000',
@@ -19,7 +19,7 @@ const products = [
 },
 {
     id: '3',
-    name:'fingerprint',
+    name:'Fingerprint',
     img:'https://cdn.shopify.com/s/files/1/0430/9594/9479/products/D-CYBEREDITADA-3_800x.jpg?v=1660304218',
     category:'calzas',
     price: '4000',
@@ -28,7 +28,7 @@ const products = [
 },
 {
     id: '4',
-    name:'crossfit',
+    name:'Crossfit',
     img:'https://cdn.shopify.com/s/files/1/0430/9594/9479/products/S-DUAL-F_800x.jpg?v=1646829641',
     category:'calzas',
     price: '3500',

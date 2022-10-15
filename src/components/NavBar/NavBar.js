@@ -13,15 +13,15 @@ function Nav() {
           <Link to={'/'}>
           <li>Inicio</li>
           </Link>            
-          <Link to={'/calzas'}>
-          <li>Calzas</li>
-          </Link>
-          <Link to={'/tops'}>
+            <Link to={'/category/calzas'}>
+            <li>Calzas</li>
+            </Link>
+          <Link to={'/category/tops'}>
           <li>Tops</li>
           </Link>
-          <Link to={'/remeras'}>
-          <li>Remeras</li>
-          </Link>
+            <Link to={'/category/remeras'}>
+            <li>Remeras</li>
+            </Link>
           <CartWidget /> 
         </ul>
     </nav>

@@ -20,6 +20,7 @@ function App() {
         <Nav />
           <Routes>
             <Route path = '/' element={<ItemListContainer greeting={'Bienvenido/a'} />}/>
+            <Route path = '/category/:categoryId' element={<ItemListContainer greeting={'Bienvenido/a'} />}/>
             <Route path = '/detail/:productId' element={<ItemDetailContainer/> }/>
           </Routes>   
           

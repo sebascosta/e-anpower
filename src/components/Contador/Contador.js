@@ -19,10 +19,10 @@ function Contador() {
 
   return (
     <div>
-        <h1>Agregar productos</h1>
+        <h1>Agregar al carrito</h1>
         <h2>{count}</h2>        
-        <button onClick={restar}>Restar</button>
-        <button onClick={sumar}>Sumar</button>
+        <button onClick={restar}>Quitar</button>
+        <button onClick={sumar}>Agregar</button>
 
     </div>
   )

@@ -9,3 +9,13 @@
 text-align: center;
     
 }
+
+.title{
+    margin: 5vh ;
+}
+
+.lista{
+    margin: 5vh ;    
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(22rem, 1fr));
+}
