@@ -34,7 +34,82 @@ const products = [
     price: '3500',
     stock: '5',
     description:'Descripción de Toxic',
-}
+},
+{
+    id: '5',
+    name:'ACE TOP',
+    img:'https://cdn.shopify.com/s/files/1/0430/9594/9479/products/S-ACE-FT_800x.jpg?v=1646829658',
+    category:'top',
+    price: '3500',
+    stock: '5',
+    description:'Descripción de ACE TOP',
+},
+
+{
+    id: '6',
+    name:'PRIDE CAMO TOP',
+    img:'https://cdn.shopify.com/s/files/1/0430/9594/9479/products/S-PRIDECAMOEDITADA-1_1_800x.jpg?v=1647954709',
+    category:'top',
+    price: '3500',
+    stock: '5',
+    description:'Descripción de PRIDE CAMO TOP',
+},
+
+{
+    id: '7',
+    name:'SEAMLESS BLACK TOP',
+    img:'https://cdn.shopify.com/s/files/1/0430/9594/9479/products/S-PAMPITABLACK-1_800x.jpg?v=1664308619',
+    category:'top',
+    price: '3500',
+    stock: '5',
+    description:'Descripción de SEAMLESS BLACK TOP',
+},
+{
+    id: '8',
+    name:'NEON ESSENTIAL TOP',
+    img:'https://cdn.shopify.com/s/files/1/0430/9594/9479/products/TO-xxx-FT_800x.jpg?v=1637258840',
+    category:'top',
+    price: '3500',
+    stock: '5',
+    description:'Descripción de NEON ESSENTIAL TOP',
+},
+
+{
+    id: '9',
+    name:'SPORTY BLACK TEE',
+    img:'https://cdn.shopify.com/s/files/1/0430/9594/9479/products/TH-SPORTYTEEBLACKEDITADA-1_800x.jpg?v=1659792051',
+    category:'remera',
+    price: '3500',
+    stock: '5',
+    description:'Descripción de SPORTY BLACK TEE',
+},
+{
+    id: '10',
+    name:'COURAGE TEE',
+    img:'https://cdn.shopify.com/s/files/1/0430/9594/9479/products/TS-TSHIRTnumeral-FT_800x.jpg?v=1643905793',
+    category:'remera',
+    price: '3500',
+    stock: '5',
+    description:'Descripción de COURAGE TEE',
+},
+{
+    id: '11',
+    name:'PURPLE SUDADERA BASIC',
+    img:'https://cdn.shopify.com/s/files/1/0430/9594/9479/products/MUS-UVA-FT_4f250e2c-112b-45f2-8f77-19eb8ff601fa_800x.jpg?v=1649689587',
+    category:'remera',
+    price: '3500',
+    stock: '5',
+    description:'Descripción de PURPLE SUDADERA BASIC',
+},
+{
+    id: '12',
+    name:'NEON SUDADERA',
+    img:'https://cdn.shopify.com/s/files/1/0430/9594/9479/products/SU-NEON-FT_800x.jpg?v=1627409004',
+    category:'remera',
+    price: '3500',
+    stock: '5',
+    description:'Descripción de NEON SUDADERA',
+},
 
 ]
 
