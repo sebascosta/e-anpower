@@ -17,11 +17,12 @@ function Nav() {
             <li>Calzas</li>
             </Link>
           <Link to={'/category/tops'}>
-          <li>Tops</li>
-          </Link>
+            <li>Tops</li>          
+          </Link>        
             <Link to={'/category/remeras'}>
-            <li>Remeras</li>
+            <li>Remeras</li> 
             </Link>
+
           <CartWidget /> 
         </ul>
     </nav>

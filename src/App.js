@@ -1,11 +1,7 @@
 import React from 'react';
 import './components/App.css';
 import Nav from './components/NavBar/NavBar';
-import Calzas from './components/Calzas';
-import Remeras from './components/Remeras';
-import Inicio from './components/Inicio';
-import Tops from './components/Tops';
-import {BrowserRouter,Routes, Route, Link } from 'react-router-dom';
+import {BrowserRouter,Routes, Route } from 'react-router-dom';
 import ItemListContainer from './components/ItemListContainer/ItemListContainer';
 import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
 
@@ -20,10 +16,10 @@ function App() {
         <Nav />
           <Routes>
             <Route path = '/' element={<ItemListContainer greeting={'Bienvenido/a'} />}/>
-            <Route path = '/category/:categoryId' element={<ItemListContainer greeting={'Bienvenido/a'} />}/>
+            <Route path = '/category/:categoryId' element={<ItemListContainer />}/>
             <Route path = '/detail/:productId' element={<ItemDetailContainer/> }/>
-          </Routes>   
-          
+            <Route path = '*' element = {<h1>404 NOT FOUND</h1>} />
+          </Routes>
         </BrowserRouter>
       </div>
    
