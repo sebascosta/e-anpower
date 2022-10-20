@@ -1,14 +1,14 @@
 import React from 'react'
 import { useState } from 'react'
 
-function Contador() {
+const Contador = ({stock = 0, initial = 0, onAdd})=> {
 
-    const [count, setCount] = useState(0)
-
-    
+    const [count, setCount] = useState(initial)    
 
         const sumar = ()=> {
-            setCount(count + 1)
+           if(count < stock){
+            setCount (count + 1)
+            }
         }
 
         const restar = ()=> {
@@ -19,10 +19,10 @@ function Contador() {
 
   return (
     <div>
-        <h1>Agregar al carrito</h1>
         <h2>{count}</h2>        
-        <button onClick={restar}>Quitar</button>
-        <button onClick={sumar}>Agregar</button>
+        <button onClick={restar}style={{width:20}}> - </button>
+        <button onClick={sumar} style={{width:20}}> +  </button>
+        <button onClick={() => onAdd(count)}>Agregar al carrito</button>
 
     </div>
   )

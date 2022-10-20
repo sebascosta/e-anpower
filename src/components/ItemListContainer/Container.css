@@ -17,5 +17,9 @@ text-align: center;
 .lista{
     margin: 5vh ;    
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(22rem, 1fr));
+    column-gap: 40px;
+    row-gap: 15vh;   
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    justify-content: space-between; 
 }
+
