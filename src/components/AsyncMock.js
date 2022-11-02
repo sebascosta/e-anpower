@@ -131,7 +131,7 @@ export const getProductsById = (id) => {
 
 export const getProductsByCategory = (categoryId) => {
     return new Promise((resolve) => {
-        resolve (products.filter(prod => prod.category ===categoryId))
+        resolve (products.filter(prod => prod.category === categoryId))
         })
       
 }

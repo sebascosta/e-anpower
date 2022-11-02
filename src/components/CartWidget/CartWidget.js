@@ -1,15 +1,24 @@
 import React from 'react';
 import cart from './assets/cart.svg';
 import '../App.css';
+import { useContext } from 'react';
+import { CartContext } from '../../context/CartContext';
 
 
-function CartWidget() {
-  return (
-    <div>
-        <img src={cart} className='cartIcon' alt='cart'/>       
-        {0}
-    </div>
-  )
+
+const CartWidget = () =>  {
+  
+    const {getQuantity} = useContext(CartContext) 
+
+    const quantity = getQuantity()
+
+
+      return (
+        <div>
+            <img src={cart} className='cartIcon' alt='cart'/>       
+            {quantity}
+        </div>
+      )
 }
 
 export default CartWidget
