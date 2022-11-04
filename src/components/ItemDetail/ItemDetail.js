@@ -9,11 +9,12 @@ const ItemDetail = ({ id, name, category, img, price, stock, description}) => {
 
     const { addItem } = useContext(CartContext)
 
-    const handleOnAdd = (count) => {
+    const handleOnAdd = (quantity) => {
        const productToAdd = {
-        id, name, price, count
+        id, name, price, quantity
        }
         console.log(productToAdd)
+
         addItem(productToAdd)
     }
     

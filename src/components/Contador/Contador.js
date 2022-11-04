@@ -3,26 +3,26 @@ import { useState } from 'react'
 
 const Contador = ({stock = 0, initial = 0, onAdd})=> {
 
-    const [count, setCount] = useState(initial)    
+    const [quantity, setQuantity] = useState(initial)    
 
         const sumar = ()=> {
-           if(count < stock){
-            setCount (count + 1)
+           if(quantity < stock){
+            setQuantity (quantity + 1)
             }
         }
 
         const restar = ()=> {
-            if(count > 0){
-            setCount(count - 1)
+            if(quantity > 0){
+            setQuantity(quantity - 1)
         }
         }
 
   return (
     <div>
-        <h2>{count}</h2>        
+        <h2>{quantity}</h2>        
         <button onClick={restar}style={{width:20}}> - </button>
         <button onClick={sumar} style={{width:20}}> +  </button>
-        <button onClick={() => onAdd(count)}>Agregar al carrito</button>
+        <button onClick={() => onAdd(quantity)}>Agregar al carrito</button>
 
     </div>
   )

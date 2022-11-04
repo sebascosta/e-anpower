@@ -4,12 +4,11 @@ import ItemDetail from '../ItemDetail/ItemDetail';
 import { Link, useParams } from 'react-router-dom';
 
 
-
-
-
 const ItemDetailContainer = () => {
+
         const [product, setProduct] = useState([])
         const { id, name, category, img, price, stock, description} = product
+
         const {productId} = useParams()
 
             useEffect(() => {
@@ -21,7 +20,7 @@ const ItemDetailContainer = () => {
                 return () => {
                     
                 }
-            }, [])
+            }, [productId])
 
     return (
             
