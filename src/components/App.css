@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  
 }
 
 .logo{
@@ -26,6 +27,8 @@
 }
 
 
+
+
 .ulNav{
   display: flex;
   min-height: 10vh;
@@ -43,16 +46,20 @@
   
 }
 a {
+  font-family:sans-serif;
   outline: none;
   text-decoration: none;
   padding: 2px 1px 0;
 }
 
 a:link {
+  font-family:sans-serif;
   color: #ffffff;
 }
 a:visited {
-  color: #cb22af;
+  font-family:sans-serif;  
+  font-size: 35px;
+  color:#ffffff
 }
 
 a:hover {

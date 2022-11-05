@@ -2,8 +2,18 @@
     margin: 5vh;
     display: block;
     text-align: center;
+    color: black;
+    font-family:sans-serif; 
+   
 }
 
 .title{
     margin: 5vh ;
+}
+
+.verDetalle{
+    background-color: lightcoral;
+    width: 150px;
+    border-radius: 5px;
+    font-family:sans-serif; 
 }

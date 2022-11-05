@@ -1,30 +1,46 @@
 import React from "react";
 import '../App.css';
+import { useState, useEffect } from "react";
+import { getDocs, collection } from 'firebase/firestore'
 import logo from '../Images/logo.png';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import CartWidget from '../CartWidget/CartWidget';
+import { db } from '../../services/firebase'
 
-function Nav() {
+
+
+const Nav =() =>{
+
+  const [categories, setCategories] = useState([])
+
+  useEffect(()=> {
+
+    const collectionRef = collection(db, 'categories')
+
+    getDocs(collectionRef).then(response => {
+      const categoriesAdapted = response.docs.map(doc => {
+        const data = doc.data()
+        const id = doc.CartWidget
+        return { id, ...data}
+      })
+      setCategories(categoriesAdapted)
+    })
+  }, [])
+
    return( 
-    <nav className="nav">      
-            
-        <ul className='ulNav'>
+    <nav className='ulNav'>      
           <img src={logo} alt="logo" className="logo"/>
-          <Link to={'/'}>
-          <li>Inicio</li>
-          </Link>            
-            <Link to={'/category/calzas'}>
-            <li>Calzas</li>
-            </Link>
-          <Link to={'/category/tops'}>
-            <li>Tops</li>          
-          </Link>        
-            <Link to={'/category/remeras'}>
-            <li>Remeras</li> 
-            </Link>
+          <NavLink to={'/'}>
+          <h4>Inicio</h4>
+          </NavLink>  
 
+          {
+            categories.map(cat => (
+            <NavLink key={cat.id} to={`/category/${cat.slug}`}>{cat.label}</NavLink>))
+          }
           <CartWidget /> 
-        </ul>
+                  
+        
     </nav>
       )
 }

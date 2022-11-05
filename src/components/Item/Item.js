@@ -1,5 +1,6 @@
 import Contador from '../Contador/Contador';
 import {Link} from 'react-router-dom';
+import '../ItemDetail/ItemDetail.css'
 
 const Item = ({id, name, img, price, category, description, stock}) =>{
 
@@ -9,10 +10,11 @@ const Item = ({id, name, img, price, category, description, stock}) =>{
         <div className="detalle">
             <h1 className='title'>{name}</h1>       
             <img src={img} alt={name} style={{height:400}} /> 
-            <p>Categoria: {category}</p>       
+            <p>{category}</p>       
             <p>Precio: ${price}</p>
             <p>{description}</p>
-            <Link to={`/detail/${id}`}>Ver detalle</Link>
+            <button className="verDetalle"><Link to={`/detail/${id}`}>Ver detalle</Link></button>
+            
             
         </div>
     )
