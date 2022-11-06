@@ -1,4 +1,3 @@
-import Contador from '../Contador/Contador';
 import {Link} from 'react-router-dom';
 import '../ItemDetail/ItemDetail.css'
 

@@ -4,9 +4,12 @@ import { useContext } from 'react'
 import { CartContext } from '../../context/CartContext'
 
 
+
+
 const ItemDetail = ({ id, name, category, img, price, stock, description}) => {
 
-    const { addItem } = useContext(CartContext)
+    const { addItem, isInCart, getProductQuantity  } = useContext(CartContext)
+   
 
     const handleOnAdd = (quantity) => {
        const productToAdd = {
@@ -14,18 +17,21 @@ const ItemDetail = ({ id, name, category, img, price, stock, description}) => {
        }
         console.log(productToAdd)
 
-        addItem(productToAdd)
+        addItem(productToAdd, quantity)
+       
     }
+
+    const quantityAdded = getProductQuantity(id)
     
    
     return (
         <div className="detalle">
             <h1 className='title'>{name}</h1>       
             <img src={img} alt={name} style={{height:400}} /> 
-            <p>Categoria: {category}</p>       
+                 
             <p>Precio: ${price}</p>
             <p> {description} </p>           
-            <Contador onAdd = {handleOnAdd} stock={stock}/>
+            <Contador onAdd = {handleOnAdd} stock={stock} initial={quantityAdded}/>
         </div>
     )
     
