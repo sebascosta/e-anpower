@@ -1,3 +1,10 @@
 .cartContainer{
     text-align: center;
 }
+
+.finalizar{
+    background-color: rgb(235, 120, 139);
+    font-size: large;
+    font-family: sans-serif;
+    
+}

@@ -34,7 +34,7 @@ const Checkout = () =>{
         <div>
             <h1>Checkout</h1>
             <h2>Formulario</h2>
-            <button>Generar orden</button>
+            <button onClick={createOrder}>Generar orden</button>
         </div>
         )
     

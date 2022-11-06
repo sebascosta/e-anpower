@@ -19,8 +19,7 @@ const CartWidget = () =>  {
           
             <button to='/cart' className="CartWidget" onClick={() => navigate('/cart')}>
             <img src={cart} alt='cart-widget' className='CartImg'/>
-            {totalQuantity}
-           
+            {totalQuantity}           
             </button>
         </div>
       )
