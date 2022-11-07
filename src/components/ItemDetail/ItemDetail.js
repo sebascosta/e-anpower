@@ -2,6 +2,7 @@ import '../ItemDetail/ItemDetail.css'
 import Contador from '../Contador/Contador'
 import { useContext } from 'react'
 import { CartContext } from '../../context/CartContext'
+import { NotificationContext } from '../../notification/NotificationService'
 
 
 
@@ -9,7 +10,7 @@ import { CartContext } from '../../context/CartContext'
 const ItemDetail = ({ id, name, category, img, price, stock, description}) => {
 
     const { addItem, isInCart, getProductQuantity  } = useContext(CartContext)
-   
+    const { setNotification } = useContext(NotificationContext)
 
     const handleOnAdd = (quantity) => {
        const productToAdd = {
@@ -18,6 +19,7 @@ const ItemDetail = ({ id, name, category, img, price, stock, description}) => {
         console.log(productToAdd)
 
         addItem(productToAdd, quantity)
+        setNotification('success', `Se agregó correctamente ${quantity} producto/s de ${name}`)
        
     }
 

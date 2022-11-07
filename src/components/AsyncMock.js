@@ -120,6 +120,12 @@ export const getProducts = () => {
 
 }
 
+const addAllProducts = () => {
+    products.forEach(async prod => {
+        await addDoc(productsRef, prod)
+    })
+}
+
 export const getProductsById = (id) => {
     return new Promise((resolve) => {
         resolve (products.find(prod =>{

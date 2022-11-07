@@ -8,13 +8,13 @@ import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailCont
 import Cart from './components/cart/Cart'
 import Checkout from './components/checkout/Checkout'
 import { CartProvider } from './context/CartContext'
-
-
+import { NotificationProvider } from './notification/NotificationService';
 
 function App() {
   return (
     
       <div>   
+        <NotificationProvider>
          <CartProvider>   
           <BrowserRouter> 
             <Nav />
@@ -28,6 +28,7 @@ function App() {
             </Routes>
           </BrowserRouter>
         </CartProvider> 
+        </NotificationProvider>
       </div>
    
   );

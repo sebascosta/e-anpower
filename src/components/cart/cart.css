@@ -1,10 +1,39 @@
 .cartContainer{
     text-align: center;
-}
+    font-family: sans-serif;
+    margin: 25px;
+    font-size: x-large;
+    background-color: darkturquoise;
+    }
+
+    .margin{
+        margin: 0 50px;
+    }
+
+    .align{
+        display: inline-flex;
+    }
+
+    .buttonS{
+        border-radius: 10px;
+        padding: 5px;
+        margin: 10px;
+    }
 
 .finalizar{
     background-color: rgb(235, 120, 139);
     font-size: large;
     font-family: sans-serif;
+    border-radius: 10px;
+    padding: 5px;
+
     
 }
+
+.cartIcon{
+    height: 50px;
+  }
+
+  .finCompra{
+    margin: 20px;
+  }

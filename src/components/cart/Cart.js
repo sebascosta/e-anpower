@@ -2,6 +2,7 @@ import { useContext } from "react"
 import './cart.css'
 import { CartContext } from "../../context/CartContext"
 import {NavLink} from 'react-router-dom';
+import cartImg from '../CartWidget/assets/cart.svg';
 
 const Cart = () =>{
 
@@ -9,22 +10,22 @@ const Cart = () =>{
 
     return(
         <div className="cartContainer">
-            <h1>cart</h1>
+            <img src={cartImg} alt='cart-widget' className='cartIcon'/>
             {
                 cart.map(prod => (
-                    <div>
-                        {prod.name} Cantidad: {prod.quantity}                                      
-                        <button onClick={() => removeItem(prod.id)}>Quitar producto</button>                  
+                    <div >
+                        <div className="align"><h4 className="margin">Producto: {prod.name}</h4><button onClick={() => removeItem(prod.id) } className="buttonS">Quitar producto</button></div> 
+                         <div><h5>Cantidad: {prod.quantity} </h5> </div>  
                     </div> 
                 ))
             }
             <div>
                 Precio Total: $ {total}
             </div>
-            <button onClick={()=> clearCart()}>Limpiar carrito</button>           
-          <div><button> <NavLink to={'/checkout'} className='finalizar'>Finalizar la compra</NavLink></button></div>
-          
+            <button onClick={()=> clearCart()} className="buttonS" >Limpiar carrito</button> 
+            <div><button  className='finalizar'> <NavLink to={'/checkout'}>Finalizar la compra</NavLink></button></div>
         </div>
+        
     )
     
 }
